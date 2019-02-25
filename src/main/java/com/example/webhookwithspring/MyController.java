@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 
 	@RequestMapping("/myapp")
-	public String myfunc() {
+	public MyWebhookDto myfunc() {
 		System.out.println("Hello World");
-		return "a";
+		return new MyWebhookDto("Hello World");
 	}
 }
