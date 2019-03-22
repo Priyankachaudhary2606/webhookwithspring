@@ -13,25 +13,25 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 
 	@RequestMapping(value="/myapp",method=RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE)
-	public JSONObject myfunc(@RequestBody String myWebhookRequestDto) {
+	public MyWebhookDto myfunc(@RequestBody String myWebhookRequestDto) {
 		
-		JSONObject myjsonObj = new JSONObject();
+		
 		
 		System.out.println("Hello World"+ myWebhookRequestDto);
-		try {
-			myjsonObj = new JSONObject(myWebhookRequestDto);
-			JSONObject queryResult = myjsonObj.getJSONObject("queryResult");
-			JSONObject intent = queryResult.getJSONObject("intent");
-			JSONObject parameters = queryResult.getJSONObject("parameters");
-			//JSONString nameparameter = queryResult.
-					
-			System.out.println("JSON QueryText"+ myjsonObj.getString("responseId"));
-			System.out.println("JSON Object"+ myjsonObj.getJSONObject("queryResult")+ "  "+ intent);
-			return myjsonObj;
-		} catch (Exception e) {
-			System.out.println(e);
-			return myjsonObj;
-		}
-		
+//		try {
+//			myjsonObj = new JSONObject(myWebhookRequestDto);
+//			JSONObject queryResult = myjsonObj.getJSONObject("queryResult");
+//			JSONObject intent = queryResult.getJSONObject("intent");
+//			JSONObject parameters = queryResult.getJSONObject("parameters");
+//			//JSONString nameparameter = queryResult.
+//					
+//			System.out.println("JSON QueryText"+ myjsonObj.getString("responseId"));
+//			System.out.println("JSON Object"+ myjsonObj.getJSONObject("queryResult")+ "  "+ intent);
+//			return myjsonObj;
+//		} catch (Exception e) {
+//			System.out.println(e);
+//			return myjsonObj;
+//		}
+		return new MyWebhookDto("Hello World");
 	}
 }
