@@ -22,7 +22,7 @@ public class MyWebhookDto {
 	public MyWebhookDto(String fulfillmentText) {
 		super();
 		this.fulfillmentText = fulfillmentText; 
-		this.intent = new IntentDto("myIntentname", "my Intent Display Name");
+//		this.intent = new IntentDto("myIntentname", "my Intent Display Name");
 	}
 
 	
