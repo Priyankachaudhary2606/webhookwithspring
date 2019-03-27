@@ -43,6 +43,17 @@
 		    <artifactId>json</artifactId>
 		    <version>20090211</version>
 		</dependency>
+		<dependency>
+		  <groupId>com.twilio.sdk</groupId>
+		  <artifactId>twilio</artifactId>
+		  <version>7.36.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.actions</groupId>
+			<artifactId>actions-on-google</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		
 		
 	</dependencies>
 
